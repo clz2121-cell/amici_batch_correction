@@ -1,0 +1,41 @@
+Seed set to 13
+Using sweep settings from /home/carletonzhao/sweep_repo_results/best_config.json
+{
+  "model_params": {
+    "n_heads": 8,
+    "n_query_dim": 128,
+    "n_head_size": 32,
+    "n_nn_embed": 256,
+    "n_nn_embed_hidden": 512,
+    "attention_dummy_score": 3.0,
+    "neighbor_dropout": 0.1,
+    "attention_penalty_coef": 1e-06,
+    "value_l1_penalty_coef": 1e-05
+  },
+  "exp_params": {
+    "lr": 0.001,
+    "epochs": 400,
+    "batch_size": 512,
+    "early_stopping": true,
+    "early_stopping_monitor": "elbo_validation",
+    "early_stopping_patience": 20,
+    "n_neighbors": 50
+  },
+  "penalty_schedule_params": {
+    "start_val": 1e-06,
+    "end_val": 0.001,
+    "epoch_start": 10,
+    "epoch_end": 20,
+    "flavor": "log"
+  }
+}
+induced: (13422, 254), test cells 1342
+slices162_clean_170_induced_arch_both seed 13: trained already, computing interaction weights from the saved model
+[34mINFO    [0m Generating sequential column names                                                                                  
+[34mINFO    [0m Generating sequential column names                                                                                  
+[34mINFO    [0m Generating sequential column names                                                                                  
+[34mINFO    [0m File [35m/home/carletonzhao/batch_correction/runs_arch/slices162_clean_170_induced_arch_both/seed13/model/[0m[95mmodel.pt[0m      
+         already downloaded                                                                                                  
+interaction weights saved (29.2 min)
+
+Note: test ELBO is comparable across variants here (all predict the same uncorrected X).
